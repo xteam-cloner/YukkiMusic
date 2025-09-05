@@ -30,11 +30,10 @@ def get_command(command, lang=None):
     return list(all_commands)
 
 
-def command(
-    commands: str | list[str],
-    prefixes: str | list[str] | None = "/",
-    case_sensitive: bool = False,
-):
+def command(commands: str | list[str],
+            prefixes: str | list[str] | None = "/",
+            case_sensitive: bool = False,
+           ):
     if not isinstance(prefixes, list):
         prefixes = [prefixes]
     prefixes.append("") # Command can work with without prefix
